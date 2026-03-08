@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API = "http://localhost:4000";
+const API = "https://coding-platform.onrender.com"
 
 function App() {
   const [problems, setProblems] = useState([]);

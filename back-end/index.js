@@ -2,10 +2,13 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(cors({
-  origin: "http://localhost:5173"
+  origin: [
+    'http://localhost:5173',
+    'https://your-frontend-domain.vercel.app'
+  ]
 }));
 
 app.use(express.json());
@@ -48,5 +51,5 @@ app.post('/submit', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Backend listening at http://localhost:${port}`);
+  console.log(`Backend listening on port ${port}`);
 });
