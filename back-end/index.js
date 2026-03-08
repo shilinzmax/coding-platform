@@ -7,7 +7,7 @@ const port = process.env.PORT || 4000;
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://coding-platform-shilinzmax.vercel.app/'
+    'https://coding-platform-shilinzmax.vercel.app'
   ]
 }));
 
